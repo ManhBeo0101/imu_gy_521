@@ -1,0 +1,11 @@
+digraph G {
+node [shape=box];
+"world" [label="world"];
+"plane" [label="plane"];
+"imu_link" [label="imu_link"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"world" -> "world_joint" [label="xyz: 0 0 0.5 \nrpy: 0 -0 0"]
+"world_joint" -> "plane"
+"plane" -> "imu_joint" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"imu_joint" -> "imu_link"
+}
